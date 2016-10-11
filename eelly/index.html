@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="style/similar.css"/>
+    <link rel="stylesheet" href="style/style.css"/>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/similar.js"></script>
+    <script src="js/picMove.js"></script>
+    <script src="js/cookies.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <ul class="sidebar_t">
+            <li>
+                <img src="images/sidenav_person.png" alt=""/><span></span>
+                <p>我的账户</p>
+            </li>
+            <div class="shop"><img src="images/sidenav_shopping.png" alt=""/><i>进货车</i></div>
+            <li>
+                <img src="images/sidenav_card.png" alt=""/><span></span>
+                <p>我的优惠券</p>
+            </li>
+            <li>
+                <img src="images/sidenav_love.png" alt=""/><span></span>
+                <p>我的收藏</p>
+            </li>
+            <li>
+                <img src="images/sidenav_vs.png" alt=""/><span></span>
+                <p>我的比货栏</p>
+            </li>
+            <li>
+                <img src="images/sidenav_history.png" alt=""/><span></span>
+                <p>最近浏览记录</p>
+            </li>
+        </ul>
+        <ul class="sidebar_b">
+            <li>
+                <img src="images/sidenav_code.png" alt=""/><span></span>
+                <p class="side_code">
+                    <img src="images/dianjia.png" alt=""/>
+                    <img src="images/changjia.png" alt=""/>
+                </p>
+            </li>
+            <li>
+                <img src="images/sidenav_yijian.png" alt=""/><span></span>
+                <p>意见反馈</p>
+            </li>
+            <li id="turnback">
+                <img src="images/sidenav_top.png" alt=""/><span></span>
+                <p>返回顶部</p>
+            </li>
+        </ul>
+    </div>
+    <div class="adv">
+        <a href="javascript:;" id="adv_btn"></a>
+    </div>
+    <div class="index_header">
+        <div class="layout">
+            <p class="welcome">Hi,欢迎来到衣联&nbsp;
+                <a href="login.html">请<span>登录</span></a>|
+                <a href="register.html"><span>免费注册</span></a>
+            </p>
+            <ul class="nav">
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/nav_map.png" /><span></span>网站导航
+                    </a>
+                    <ul class="map">
+                        <div class="map_l" id="map_l">
+                            <h3>商品分类</h3>
+
+                        </div>
+                        <div class="map_r">
+                            <dl>
+                                <dt class="green">社区</dt>
+                                <dd>
+                                    <a href="javascript:;">衣联论坛</a>
+                                    <a href="javascript:;">买手帮</a>
+                                    <a href="javascript:;">开店工具</a>
+                                    <a href="javascript:;">服装加盟</a>
+                                    <a href="javascript:;">服装企业</a>
+                                </dd>
+                            </dl>
+                            <dl class="oran">
+                                <dt>资讯</dt>
+                                <dd>
+                                    <a href="javascript:;">衣联资讯</a>
+                                    <a href="javascript:;">衣联百科</a>
+                                    <a href="javascript:;">衣联地图</a>
+                                    <a href="javascript:;">批发市场</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="blue">服务指南</dt>
+                                <dd>
+                                    <a href="javascript:;">新手入门</a>
+                                    <a href="javascript:;">帮助中心</a>
+                                    <a href="javascript:;">衣联规则</a>
+                                    <a href="javascript:;">诚信保障</a>
+                                    <a href="javascript:;">商家认证</a>
+                                    <a href="javascript:;">交易安全</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="purple">主要频道</dt>
+                                <dd>
+                                    <a href="javascript:;">好货推荐</a>
+                                    <a href="javascript:;">网店进货</a>
+                                    <a href="javascript:;">品牌馆</a>
+                                    <a href="javascript:;">逛市场</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/nav_mobile.png" /><span></span>手机逛衣联
+                    </a>
+                    <ul class="mobile">
+                        <li>
+                            <dl>
+                                <dt><img src="images/dianjia.png" alt=""/></dt>
+                                <dd>
+                                    <h5>衣联店+</h5>
+                                    <a href="javascript:;" id="iphone" class="iphone"></a>
+                                    <a href="javascript:;" id="andriod" class="andriod"></a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/changjia.png" alt=""/></dt>
+                                <dd>
+                                    <h5>衣联厂+</h5>
+                                    <a href="javascript:;" id="iphone" class="iphone"></a>
+                                    <a href="javascript:;" id="andriod" class="andriod"></a>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/nav_help.png" /><span></span>在线客服
+                    </a>
+                    <ul class="online">
+                        <li>
+                            <a href="javascript:;">进货咨询</a>
+                            <a href="javascript:;">入驻店铺</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/nav_love.png" /><span></span>收藏夹
+                    </a>
+                    <ul class="collect">
+                        <li>
+                            <a href="javascript:;">收藏的商品</a>
+                            <a href="javascript:;">收藏的店铺</a>
+                            <a href="javascript:;">收藏的动态</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="shopping.html">
+                        <img src="images/nav_shopping.png"/>
+                        <span></span>进货车
+                    </a>
+                    <ul class="blancket">
+                        <p class="title">最近加入的货品 ：</p>
+                        <div class="blan_main"></div>
+                        <div class='total'>
+                            <p>
+                                <span class='total_r'>
+                                    <b>总计</b>
+                                    <em>￥&nbsp;<span class='t_pri'></span></em>
+                                </span>
+                                <span class='total_l'>
+                                    共<span class='t_amount'></span>件
+                                </span>
+                            </p>
+                            <p>
+                                <a href='shopping.html' target='_blank' class='go_shopping'>查看购物车</a>
+                            </p>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">我的衣联</a>
+                    <ul class="myeelly">
+                        <li>
+                            <h6>买家</h6>
+                            <a href="javascript:;">等待我付款</a>
+                            <a href="javascript:;">等待卖家发货</a>
+                        </li>
+                        <li>
+                            <h6>卖家</h6>
+                            <a href="javascript:;">等待我发货</a>
+                            <a href="javascript:;">等待买家付款</a>
+                            <a href="javascript:;">出售中的商品</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="index.html" class="first">首页</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="index_title">
+        <div class="layout">
+            <div class="index_logo">
+                <a href="index.html"><img src="images/logo.png" alt=""/></a>
+            </div>
+            <div class="index_code">
+                <a href="index.html"><img src="images/erweima.png" alt=""/></a>
+            </div>
+            <div class="search">
+                <div class="searchin" style="height: 45px; width: 520px; border: 0;">
+                    <input type="text" id="index_inpt"/>
+                    <input type="button" id="index_btn"/>
+                </div>
+                <ul class="hot_search">
+                    <li><a href="javascript:;">2016秋冬新款</a></li>
+                    <li><a href="javascript:;">秋款毛衣</a></li>
+                    <li><a href="javascript:;">中长款连衣裙</a></li>
+                    <li><a href="javascript:;">时尚套装</a></li>
+                    <li><a href="javascript:;">男装衬衫</a></li>
+                    <li><a href="javascript:;">男T恤</a></li>
+                    <li><a href="javascript:;">女童外套</a></li>
+                    <li><a href="javascript:;">潮女T</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="index_subnav">
+        <div class="layout">
+            <div class="menuall">
+                全部商品类目
+                <div class="menu_box">
+
+                </div>
+            </div>
+            <ul>
+                <li><a href="list.html">女装</a></li>
+                <li><a href="list.html">男装</a></li>
+                <li><a href="list.html">童装</a></li>
+                <li><a href="list.html">内衣</a></li>
+                <li><a href="list.html">鞋子</a></li>
+                <li><a href="list.html">箱包</a></li>
+                <li><a href="list.html">衣饰</a></li>
+                <li><a href="javascript:;">一件代发</a></li>
+                <li><a href="javascript:;">游论坛</a></li>
+                <li><a href="active.html">品牌馆</a></li>
+                <li><a href="javascript:;">产业服务</a></li>
+                <li><a href="javascript:;">衣联厂+</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="fix_search">
+        <div class="layout">
+            <a href="javascript:;"><img src="images/fix_logo.png" alt=""/></a>
+            <div class="searchin" style="margin-top: -43px;margin-left: 160px;">
+                <input type="text" id="index_inpt"/>
+                <input type="button" id="index_btn"/>
+            </div>
+        </div>
+    </div>
+    <div class="section_a">
+        <div class="layout">
+            <ul class="sec_left">
+                    <li class="active">
+                        <a href="javascript:;">
+                            <i><img src="images/sea_left1.png" alt=""/><span></span></i>
+
+                            热门类目
+                        </a>
+                        <div class="hot">
+                            <span></span>
+                        </div>
+
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i><img src="images/sea_left2.png" alt=""/><span></span></i>
+
+                            批发市场
+                        </a>
+                        <div class="market">
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="last">
+                        <h1>活动
+                            <img src="images/sea_left3.png" alt=""/>
+                        </h1>
+                        <a href="javascript:;">应季爆品</a>
+                        <a href="javascript:;">醉美长裙</a>
+                        <a href="javascript:;">甜美热销款</a>
+                        <a href="javascript:;">品质尖货</a>
+                        <a href="javascript:;">最潮文艺</a>
+                    </li>
+            </ul>
+            <div class="sec_right">
+                <div class="sec_rone">
+                    <div class="index_show">
+                        <p>欢迎来到衣联网</p>
+                        <img src="images/sec_rone_pic.png" alt=""/>
+                        <ul>
+                            <li><a href="login.html"><img src="images/sec_rone_pic3.png" alt=""/><span></span>登录</a></li>
+                            <li><a href="register.html"><img src="images/sec_rone_pic2.png" alt=""/><span></span>注册</a></li>
+                            <li class="last"><a href="javascript:;"><img src="images/sec_rone_pic4.png" alt=""/><span></span>入驻</a></li>
+                        </ul>
+                    </div>
+                    <div class="index_hide">
+                        <div class="index_login_t">
+                            <span class="login_tpic">
+                                <img src="images/noavatar_small.png" alt=""/>
+                            </span>
+                            <div class="login_desr">
+                                <p class="login_name">Hi,</p>
+                                <p class="login_text">欢迎来到衣联</p>
+                            </div>
+                        </div>
+                        <div class="index_login_b">
+                            <ul class="status_num">
+                                <li>0</li>
+                                <li>0</li>
+                                <li>0</li>
+                                <li>0</li>
+                            </ul>
+                            <ul class="status_name">
+                                <li><a href="javascript:;">待付款</a></li>
+                                <li><a href="javascript:;">待发货</a></li>
+                                <li><a href="javascript:;">待收货</a></li>
+                                <li><a href="javascript:;">待评价</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec_rtwo">
+                    <img src="images/sec_rtwo.png" alt=""/>
+                    <p>服装采购商的选择</p>
+                </div>
+                <div class="sec_rthree">
+                    <img src="images/sec_rthree.png" alt=""/>
+                </div>
+                <div class="sec_rfour">
+                    平台公告
+                    <ul>
+                        <li><a href="javascript:;" title="衣联退换货处理规则">衣联退换货处理规则</a></li>
+                        <li><a href="javascript:;" title="关于引导站外交易的认定与实细则">关于引导站外交易的认定与实细则</a></li>
+                        <li><a href="javascript:;" title="争议处理细则：退换货规范">争议处理细则：退换货规范</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sec_middle">
+                <div class="sec_mpic">
+                </div>
+                <a href="javascript:;"><img src="images/rec_m_img1.jpg" alt=""/></a>
+                <a href="javascript:;"><img src="images/rec_m_img2.jpg" alt=""/></a>
+                <a href="javascript:;"><img src="images/rec_m_img3.jpg" alt=""/></a>
+                <a href="javascript:;"><img src="images/rec_m_img4.jpg" alt=""/></a>
+            </div>
+        </div>
+    </div>
+    <div class="section_b">
+        <div class="layout">
+            <div class="secb_l">
+                <ul class="secpart">
+                    <li>
+                        <div class="sec_mask"></div>
+                        <div class="secb_wrap">
+                            <dl>
+                                <p class="good">优质档口</p>
+                                <dt class="secb_img"><img src="images/secb_img1.jpg" alt=""/></dt>
+                                <dd class="secb_word">
+                                    <h4>MISS仙仙</h4>
+                                    <p>广州大西豪5层532</p>
+                                </dd>
+                            </dl>
+                            <div class="secb_hide">
+                                <dl>
+                                    <dt><img src="images/secb_hide_img1.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥30.00</p>
+                                        <p class="grey">拿货 ￥32.00</p>
+                                        <p class="grey">散批 ￥34.00</p>
+                                        <p class="cell">24人感兴趣</p>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="images/secb_hide_img2.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥30.00</p>
+                                        <p class="grey">拿货 ￥32.00</p>
+                                        <p class="grey">散批 ￥34.00</p>
+                                        <p class="cell">86人感兴趣</p>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="images/secb_hide_img3.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥46.00</p>
+                                        <p class="grey">拿货 ￥48.00</p>
+                                        <p class="grey">散批 ￥50.00</p>
+                                        <p class="cell">75人感兴趣</p>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="images/secb_hide_img4.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥30.00</p>
+                                        <p class="grey">拿货 ￥32.00</p>
+                                        <p class="grey">散批 ￥34.00</p>
+                                        <p class="cell">24人感兴趣</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="sec_mask"></div>
+                        <div class="secb_wrap">
+                            <dl>
+                                <p class="good">优质档口</p>
+                                <dt class="secb_img"><img src="images/secb_img2.jpg" alt=""/></dt>
+                                <dd class="secb_word">
+                                    <h4>名媛网络服饰</h4>
+                                    <p>广州国大网络批发城5层530</p>
+                                </dd>
+                            </dl>
+                            <div class="secb_hide">
+                                <dl>
+                                    <dt><img src="images/secb_hide_img1.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥30.00</p>
+                                        <p class="grey">拿货 ￥32.00</p>
+                                        <p class="grey">散批 ￥34.00</p>
+                                        <p class="cell">24人感兴趣</p>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="images/secb_hide_img2.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥30.00</p>
+                                        <p class="grey">拿货 ￥32.00</p>
+                                        <p class="grey">散批 ￥34.00</p>
+                                        <p class="cell">86人感兴趣</p>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="images/secb_hide_img3.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥46.00</p>
+                                        <p class="grey">拿货 ￥48.00</p>
+                                        <p class="grey">散批 ￥50.00</p>
+                                        <p class="cell">75人感兴趣</p>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="images/secb_hide_img4.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥30.00</p>
+                                        <p class="grey">拿货 ￥32.00</p>
+                                        <p class="grey">散批 ￥34.00</p>
+                                        <p class="cell">24人感兴趣</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="sec_mask"></div>
+                        <div class="secb_wrap">
+                            <dl>
+                                <p class="good">优质档口</p>
+                                <dt class="secb_img"><img src="images/secb_img3.jpg" alt=""/></dt>
+                                <dd class="secb_word">
+                                    <h4>TOTEM</h4>
+                                    <p>广州白马服装批发市场4层4418</p>
+                                </dd>
+                            </dl>
+                            <div class="secb_hide">
+                                <dl>
+                                    <dt><img src="images/secb_hide_img1.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥30.00</p>
+                                        <p class="grey">拿货 ￥32.00</p>
+                                        <p class="grey">散批 ￥34.00</p>
+                                        <p class="cell">24人感兴趣</p>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="images/secb_hide_img2.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥30.00</p>
+                                        <p class="grey">拿货 ￥32.00</p>
+                                        <p class="grey">散批 ￥34.00</p>
+                                        <p class="cell">86人感兴趣</p>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="images/secb_hide_img3.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥46.00</p>
+                                        <p class="grey">拿货 ￥48.00</p>
+                                        <p class="grey">散批 ￥50.00</p>
+                                        <p class="cell">75人感兴趣</p>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="images/secb_hide_img4.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥30.00</p>
+                                        <p class="grey">拿货 ￥32.00</p>
+                                        <p class="grey">散批 ￥34.00</p>
+                                        <p class="cell">24人感兴趣</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="sec_mask"></div>
+                        <div class="secb_wrap">
+                            <dl>
+                                <p class="good">优质档口</p>
+                                <dt class="secb_img"><img src="images/secb_img4.jpg" alt=""/></dt>
+                                <dd class="secb_word">
+                                    <h4>四方服饰</h4>
+                                    <p>广州北城服装网络批发城1层12..</p>
+                                </dd>
+                            </dl>
+                            <div class="secb_hide">
+                                <dl>
+                                    <dt><img src="images/secb_hide_img1.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥30.00</p>
+                                        <p class="grey">拿货 ￥32.00</p>
+                                        <p class="grey">散批 ￥34.00</p>
+                                        <p class="cell">24人感兴趣</p>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="images/secb_hide_img2.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥30.00</p>
+                                        <p class="grey">拿货 ￥32.00</p>
+                                        <p class="grey">散批 ￥34.00</p>
+                                        <p class="cell">86人感兴趣</p>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="images/secb_hide_img3.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥46.00</p>
+                                        <p class="grey">拿货 ￥48.00</p>
+                                        <p class="grey">散批 ￥50.00</p>
+                                        <p class="cell">75人感兴趣</p>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="images/secb_hide_img4.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥30.00</p>
+                                        <p class="grey">拿货 ￥32.00</p>
+                                        <p class="grey">散批 ￥34.00</p>
+                                        <p class="cell">24人感兴趣</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="sec_mask"></div>
+                        <div class="secb_wrap">
+                            <dl>
+                                <p class="good">优质档口</p>
+                                <dt class="secb_img"><img src="images/secb_img5.jpg" alt=""/></dt>
+                                <dd class="secb_word">
+                                    <h4>野人基地</h4>
+                                    <p>广州桨栏路男装批发1层38号</p>
+                                </dd>
+                            </dl>
+                            <div class="secb_hide">
+                                <dl>
+                                    <dt><img src="images/secb_hide_img1.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥30.00</p>
+                                        <p class="grey">拿货 ￥32.00</p>
+                                        <p class="grey">散批 ￥34.00</p>
+                                        <p class="cell">24人感兴趣</p>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="images/secb_hide_img2.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥30.00</p>
+                                        <p class="grey">拿货 ￥32.00</p>
+                                        <p class="grey">散批 ￥34.00</p>
+                                        <p class="cell">86人感兴趣</p>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="images/secb_hide_img3.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥46.00</p>
+                                        <p class="grey">拿货 ￥48.00</p>
+                                        <p class="grey">散批 ￥50.00</p>
+                                        <p class="cell">75人感兴趣</p>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt><img src="images/secb_hide_img4.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p>打包</p>
+                                        <p class="price">￥30.00</p>
+                                        <p class="grey">拿货 ￥32.00</p>
+                                        <p class="grey">散批 ￥34.00</p>
+                                        <p class="cell">24人感兴趣</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="secb_r">
+                <h2>走货</h2>
+                <div class="sellgood">
+                    <div class="list">
+                        <dl>
+                            <dt><img src="images/secb_rimg1.jpeg" alt=""/></dt>
+                            <dd>
+                                <span>欧韩风时尚公司</span>
+                                <p>与y***5达成一笔231元的交易</p>
+                                <p>09-24 11:34</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/secb_rimg2.jpeg" alt=""/></dt>
+                            <dd>
+                                <span>随意门批发</span>
+                                <p>与y***3达成一笔281元的交易</p>
+                                <p>09-24 11:32</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/secb_rimg3.jpeg" alt=""/></dt>
+                            <dd>
+                                <span>鱼蛋儿工作室</span>
+                                <p>与y***5达成一笔348元的交易</p>
+                                <p>09-24 11:31</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/secb_rimg1.jpeg" alt=""/></dt>
+                            <dd>
+                                <span>欧韩风时尚公司</span>
+                                <p>与y***5达成一笔231元的交易</p>
+                                <p>09-24 11:34</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/secb_rimg2.jpeg" alt=""/></dt>
+                            <dd>
+                                <span>随意门批发</span>
+                                <p>与y***3达成一笔281元的交易</p>
+                                <p>09-24 11:32</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/secb_rimg3.jpeg" alt=""/></dt>
+                            <dd>
+                                <span>鱼蛋儿工作室</span>
+                                <p>与y***5达成一笔348元的交易</p>
+                                <p>09-24 11:31</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/secb_rimg1.jpeg" alt=""/></dt>
+                            <dd>
+                                <span>欧韩风时尚公司</span>
+                                <p>与y***5达成一笔231元的交易</p>
+                                <p>09-24 11:34</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/secb_rimg2.jpeg" alt=""/></dt>
+                            <dd>
+                                <span>随意门批发</span>
+                                <p>与y***3达成一笔281元的交易</p>
+                                <p>09-24 11:32</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/secb_rimg3.jpeg" alt=""/></dt>
+                            <dd>
+                                <span>鱼蛋儿工作室</span>
+                                <p>与y***5达成一笔348元的交易</p>
+                                <p>09-24 11:31</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/secb_rimg1.jpeg" alt=""/></dt>
+                            <dd>
+                                <span>欧韩风时尚公司</span>
+                                <p>与y***5达成一笔231元的交易</p>
+                                <p>09-24 11:34</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/secb_rimg2.jpeg" alt=""/></dt>
+                            <dd>
+                                <span>随意门批发</span>
+                                <p>与y***3达成一笔281元的交易</p>
+                                <p>09-24 11:32</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/secb_rimg3.jpeg" alt=""/></dt>
+                            <dd>
+                                <span>鱼蛋儿工作室</span>
+                                <p>与y***5达成一笔348元的交易</p>
+                                <p>09-24 11:31</p>
+                            </dd>
+                        </dl>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="section_c">
+        <div class="layout">
+            <a href="javascript:;"><img src="images/secc_img1.jpg" alt=""/></a>
+            <a href="javascript:;"><img src="images/secc_img2.jpg" alt=""/></a>
+            <a href="javascript:;"><img src="images/secc_img3.jpg" alt=""/></a>
+            <a href="javascript:;"><img src="images/secc_img4.jpg" alt=""/></a>
+        </div>
+    </div>
+    <div class="choice">
+        <div class="layout">
+            <h3 class="subtitle"><i></i>精选市场</h3>
+            <div class="ch_main">
+                <dl class="dlimg01">
+                    <dt>
+                        <h4>
+                            新中国服装市场
+                            <a href="javascript:;" class="ch_more">查看更多爆款</a>
+                        </h4>
+                        <p>十三行最早的服装市场，这里服装以潮流时尚少女装为主，更新速度快，是全国最大的时尚女装批发市场。</p>
+                    </dt>
+                    <dd>
+                        <div class="ch_mainb">
+                            <a href="javascript:;"></a>
+                            <div class="ch_maintop">
+                                <div class="ch_hide">
+                                    <h5>广州市潮哈派贸易有限公司</h5>
+                                    <p>均价：￥103.50/2135人感兴趣</p>
+                                    <span>广州杨巷一号303</span>
+                                </div>
+                            </div>
+                            <img src="images/ch_main_img1.jpg" alt=""/>
+                        </div>
+                        <div class="ch_mainb">
+                            <a href="javascript:;"></a>
+                            <div class="ch_maintop">
+                                <div class="ch_hide">
+                                    <h5>深圳市龙岗区诗雪儿服装厂</h5>
+                                    <p>均价：￥66.89/683人感兴趣</p>
+                                    <span>深圳丽方路32号A栋</span>
+                                </div>
+                            </div>
+                            <img src="images/ch_main_img2.jpg" alt=""/>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="dlimg02">
+                    <dt>
+                        <h4>
+                            沙河金马服装城
+                            <a href="javascript:;" class="ch_more">查看更多爆款</a>
+                        </h4>
+                        <p>广州金马服装交易城位于广州沙河服装商圈龙头位置，秋冬季节，针织款走得最好。</p>
+                    </dt>
+                    <dd>
+                        <div class="ch_mainb">
+                            <div class="ch_maintop">
+                                <div class="ch_hide">
+                                    <h5>上海京思电子商务有限公司</h5>
+                                    <p>均价：￥63.97/2042人感兴趣</p>
+                                    <span>广州</span>
+                                </div>
+                            </div>
+                            <img src="images/ch_main_img3.jpg" alt=""/>
+                        </div>
+                        <div class="ch_mainb">
+                            <div class="ch_maintop">
+                                <div class="ch_hide">
+                                    <h5>兰薇米拉</h5>
+                                    <p>均价：￥57.79/2527人感兴趣</p>
+                                    <span>广州金马网络3层C034B</span>
+                                </div>
+                            </div>
+                            <img src="images/ch_main_img4.jpg" alt=""/>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="dlimg03">
+                    <dt>
+                        <h4>
+                            广州益民服装城
+                            <a href="javascript:;" class="ch_more">查看更多爆款</a>
+                        </h4>
+                        <p>广东益民服装城位于天河区濂泉路27号，市场内共有上千家铺位，主要经营男装、女装、牛仔类服装。</p>
+                    </dt>
+                    <dd>
+                        <div class="ch_mainb">
+                            <div class="ch_maintop">
+                                <div class="ch_hide">
+                                    <h5>威狄豪旗舰店</h5>
+                                    <p>均价：￥47.39/1823人感兴趣</p>
+                                    <span>广州益民服装城1层A91-92档</span>
+                                </div>
+                            </div>
+                            <img src="images/ch_main_img5.jpg" alt=""/>
+                        </div>
+                        <div class="ch_mainb">
+                            <div class="ch_maintop">
+                                <div class="ch_hide">
+                                    <h5>英伦吉斯国际贸易</h5>
+                                    <p>均价：￥46.26/1782人感兴趣</p>
+                                    <span>广州益民服装城2层037</span>
+                                </div>
+                            </div>
+                            <img src="images/ch_main_img6.jpg" alt=""/>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="sellwell">
+        <div class="layout">
+            <h3 class="subtitle"><i></i>热销好卖</h3>
+            <div class="sell_main">
+                <div class="sellw_left">
+                    <img src="images/sellw_left.png" alt=""/>
+                    <p>品质女装</p>
+                    <ul>
+                        <li><a href="javascript:;">甜美秋款</a></li>
+                        <li><a href="javascript:;">休闲随意</a></li>
+                        <li><a href="javascript:;">淑女风格</a></li>
+                        <li><a href="javascript:;">通勤OL</a></li>
+                        <li><a href="javascript:;">文艺个性</a></li>
+                        <li><a href="javascript:;">前卫潮女</a></li>
+                    </ul>
+                    <a href="javascript:;" class="sellw_more">查看更多</a>
+                </div>
+
+                <div class="sellw_middle">
+                    <ul>
+                        <li><a href="javascript:;">厂家直销</a></li>
+                        <li><a href="javascript:;">2016流行</a></li>
+                        <li><a href="javascript:;">韩版女装</a></li>
+                        <li><a href="javascript:;">秋季新品</a></li>
+                        <li><a href="javascript:;">优质精品</a></li>
+                        <li><a href="javascript:;">时尚套装</a></li>
+                        <li><a href="javascript:;">修身连衣裙</a></li>
+                    </ul>
+                    <div class="sellm_main">
+                        <dl>
+                            <dt class="sellm_dt">
+                                <img src="images/sellm_main_img1.jpg" alt=""/>
+                                <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                </a>
+                            </dt>
+                            <dd class="sellm_dd">
+                                <div class="sellm_mask"></div>
+                                <div class="sellm_show">
+                                    <h6>简·约屋</h6>
+                                    <p>248人收藏</p>
+                                    <p>均价<span>￥41.67</span></p>
+                                    <i>广州沙河南城3层36</i>
+                                </div>
+                                <div class="sellm_hide">
+
+                                    <h6>简·约屋</h6>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="sellm_dt">
+                                <img src="images/sellm_main_img1.jpg" alt=""/>
+                                <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                </a>
+                            </dt>
+                            <dd class="sellm_dd">
+                                <div class="sellm_mask"></div>
+                                <div class="sellm_show">
+                                    <h6>简·约屋</h6>
+                                    <p>248人收藏</p>
+                                    <p>均价<span>￥41.67</span></p>
+                                    <i>广州沙河南城3层36</i>
+                                </div>
+                                <div class="sellm_hide">
+
+                                    <h6>简·约屋</h6>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="sellm_dt">
+                                <img src="images/sellm_main_img1.jpg" alt=""/>
+                                <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                </a>
+                            </dt>
+                            <dd class="sellm_dd">
+                                <div class="sellm_mask"></div>
+                                <div class="sellm_show">
+                                    <h6>简·约屋</h6>
+                                    <p>248人收藏</p>
+                                    <p>均价<span>￥41.67</span></p>
+                                    <i>广州沙河南城3层36</i>
+                                </div>
+                                <div class="sellm_hide">
+
+                                    <h6>简·约屋</h6>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="sellm_dt">
+                                <img src="images/sellm_main_img1.jpg" alt=""/>
+                                <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                </a>
+                            </dt>
+                            <dd class="sellm_dd">
+                                <div class="sellm_mask"></div>
+                                <div class="sellm_show">
+                                    <h6>简·约屋</h6>
+                                    <p>248人收藏</p>
+                                    <p>均价<span>￥41.67</span></p>
+                                    <i>广州沙河南城3层36</i>
+                                </div>
+                                <div class="sellm_hide">
+
+                                    <h6>简·约屋</h6>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="sellm_dt">
+                                <img src="images/sellm_main_img1.jpg" alt=""/>
+                                <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                </a>
+                            </dt>
+                            <dd class="sellm_dd">
+                                <div class="sellm_mask"></div>
+                                <div class="sellm_show">
+                                    <h6>简·约屋</h6>
+                                    <p>248人收藏</p>
+                                    <p>均价<span>￥41.67</span></p>
+                                    <i>广州沙河南城3层36</i>
+                                </div>
+                                <div class="sellm_hide">
+
+                                    <h6>简·约屋</h6>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="sellm_dt">
+                                <img src="images/sellm_main_img1.jpg" alt=""/>
+                                <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                </a>
+                            </dt>
+                            <dd class="sellm_dd">
+                                <div class="sellm_mask"></div>
+                                <div class="sellm_show">
+                                    <h6>简·约屋</h6>
+                                    <p>248人收藏</p>
+                                    <p>均价<span>￥41.67</span></p>
+                                    <i>广州沙河南城3层36</i>
+                                </div>
+                                <div class="sellm_hide">
+
+                                    <h6>简·约屋</h6>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="sellw_right">
+                    <h3>排行榜</h3>
+                    <ul class="rand">
+                        <li class="first">
+                            <div class="sellw_show">
+                                <div>
+                                    <img src="images/secb_img4.jpg" alt=""/>
+                                </div>
+                                <p>TOTEM</p>
+                                <ul>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img1.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img2.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img3.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img4.jpg" alt=""/></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="normal">
+                            <div class="sellw_show">
+                                <p>
+                                    <i>2</i>
+                                    汕头市澄海区依雅优毛织厂
+                                </p>
+                                <span>
+                                    <em style="width: 80%"></em>
+                                </span>
+                                <ul>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img1.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img2.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img3.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img4.jpg" alt=""/></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="normal">
+                            <div class="sellw_show">
+                                <p>
+                                    <i>3</i>
+                                    汕头市澄海区依雅优毛织厂
+                                </p>
+                                <span>
+                                    <em style="width: 70%"></em>
+                                </span>
+                                <ul>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img1.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img2.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img3.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img4.jpg" alt=""/></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="normal">
+                            <div class="sellw_show">
+                                <p>
+                                    <i>4</i>
+                                    汕头市澄海区依雅优毛织厂
+                                </p>
+                                <span>
+                                    <em style="width: 60%"></em>
+                                </span>
+                                <ul>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img1.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img2.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img3.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img4.jpg" alt=""/></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="normal">
+                            <div class="sellw_show">
+                                <p>
+                                    <i>5</i>
+                                    汕头市澄海区依雅优毛织厂
+                                </p>
+                                <span>
+                                    <em style="width: 50%"></em>
+                                </span>
+                                <ul>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img1.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img2.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img3.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img4.jpg" alt=""/></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="normal">
+                            <div class="sellw_show">
+                                <p>
+                                    <i>6</i>
+                                    汕头市澄海区依雅优毛织厂
+                                </p>
+                                <span>
+                                    <em></em>
+                                </span>
+                                <ul>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img1.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img2.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img3.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img4.jpg" alt=""/></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="normal">
+                            <div class="sellw_show">
+                                <p>
+                                    <i>7</i>
+                                    汕头市澄海区依雅优毛织厂
+                                </p>
+                                <span>
+                                    <em></em>
+                                </span>
+                                <ul>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img1.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img2.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img3.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img4.jpg" alt=""/></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="normal">
+                            <div class="sellw_show">
+                                <p>
+                                    <i>8</i>
+                                    汕头市澄海区依雅优毛织厂
+                                </p>
+                                <span>
+                                    <em></em>
+                                </span>
+                                <ul>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img1.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img2.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img3.jpg" alt=""/></a></li>
+                                    <li><a href="javascript:;"><img src="images/sellw_show_img4.jpg" alt=""/></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="imgarea">
+        <div class="layout">
+            <a href="javascript:;"><img src="images/area1.jpg" alt=""/></a>
+        </div>
+    </div>
+    <div class="sellwell">
+        <div class="layout">
+            <div class="sell_main">
+                <div class="sellw_left">
+                    <img src="images/sellw_left1.png" alt=""/>
+                    <p>格调男装</p>
+                    <ul>
+                        <li><a href="javascript:;">商务休闲</a></li>
+                        <li><a href="javascript:;">前卫潮男</a></li>
+                        <li><a href="javascript:;">清纯帅气</a></li>
+                        <li><a href="javascript:;">牛仔男装</a></li>
+                        <li><a href="javascript:;">时尚正装</a></li>
+                    </ul>
+                    <a href="javascript:;" class="sellw_more">查看更多</a>
+                </div>
+
+                <div class="sellw_middle">
+                    <ul>
+                        <li><a href="javascript:;">秋天新款</a></li>
+                        <li><a href="javascript:;">厂家直供</a></li>
+                        <li><a href="javascript:;">轻奢高档</a></li>
+                        <li><a href="javascript:;">潮流中档</a></li>
+                        <li><a href="javascript:;">爆款低价</a></li>
+                    </ul>
+                    <div class="sellm_main">
+                        <dl>
+                            <dt class="sellm_dt">
+                                <img src="images/sellm_main_img1.jpg" alt=""/>
+                                <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                </a>
+                            </dt>
+                            <dd class="sellm_dd">
+                                <div class="sellm_mask"></div>
+                                <div class="sellm_show">
+                                    <h6>简·约屋</h6>
+                                    <p>248人收藏</p>
+                                    <p>均价<span>￥41.67</span></p>
+                                    <i>广州沙河南城3层36</i>
+                                </div>
+                                <div class="sellm_hide">
+
+                                    <h6>简·约屋</h6>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="sellm_dt">
+                                <img src="images/sellm_main_img1.jpg" alt=""/>
+                                <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                </a>
+                            </dt>
+                            <dd class="sellm_dd">
+                                <div class="sellm_mask"></div>
+                                <div class="sellm_show">
+                                    <h6>简·约屋</h6>
+                                    <p>248人收藏</p>
+                                    <p>均价<span>￥41.67</span></p>
+                                    <i>广州沙河南城3层36</i>
+                                </div>
+                                <div class="sellm_hide">
+
+                                    <h6>简·约屋</h6>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="sellm_dt">
+                                <img src="images/sellm_main_img1.jpg" alt=""/>
+                                <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                </a>
+                            </dt>
+                            <dd class="sellm_dd">
+                                <div class="sellm_mask"></div>
+                                <div class="sellm_show">
+                                    <h6>简·约屋</h6>
+                                    <p>248人收藏</p>
+                                    <p>均价<span>￥41.67</span></p>
+                                    <i>广州沙河南城3层36</i>
+                                </div>
+                                <div class="sellm_hide">
+
+                                    <h6>简·约屋</h6>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="sellm_dt">
+                                <img src="images/sellm_main_img1.jpg" alt=""/>
+                                <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                </a>
+                            </dt>
+                            <dd class="sellm_dd">
+                                <div class="sellm_mask"></div>
+                                <div class="sellm_show">
+                                    <h6>简·约屋</h6>
+                                    <p>248人收藏</p>
+                                    <p>均价<span>￥41.67</span></p>
+                                    <i>广州沙河南城3层36</i>
+                                </div>
+                                <div class="sellm_hide">
+
+                                    <h6>简·约屋</h6>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="sellm_dt">
+                                <img src="images/sellm_main_img1.jpg" alt=""/>
+                                <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                </a>
+                            </dt>
+                            <dd class="sellm_dd">
+                                <div class="sellm_mask"></div>
+                                <div class="sellm_show">
+                                    <h6>简·约屋</h6>
+                                    <p>248人收藏</p>
+                                    <p>均价<span>￥41.67</span></p>
+                                    <i>广州沙河南城3层36</i>
+                                </div>
+                                <div class="sellm_hide">
+
+                                    <h6>简·约屋</h6>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="sellm_dt">
+                                <img src="images/sellm_main_img1.jpg" alt=""/>
+                                <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                </a>
+                            </dt>
+                            <dd class="sellm_dd">
+                                <div class="sellm_mask"></div>
+                                <div class="sellm_show">
+                                    <h6>简·约屋</h6>
+                                    <p>248人收藏</p>
+                                    <p>均价<span>￥41.67</span></p>
+                                    <i>广州沙河南城3层36</i>
+                                </div>
+                                <div class="sellm_hide">
+
+                                    <h6>简·约屋</h6>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                        <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                    </dl>
+
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="sellw_right">
+                    <div class="man">
+                        <h3>排行榜</h3>
+                        <ul class="rand">
+                            <li class="first">
+                                <div class="sellw_show">
+                                    <div>
+                                        <img src="images/secb_img4.jpg" alt=""/>
+                                    </div>
+                                    <p>TOTEM</p>
+                                    <ul>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img1.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img2.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img3.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img4.jpg" alt=""/></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="normal">
+                                <div class="sellw_show">
+                                    <p>
+                                        <i>2</i>
+                                        汕头市澄海区依雅优毛织厂
+                                    </p>
+                                    <span>
+                                        <em style="width: 80%"></em>
+                                    </span>
+                                    <ul>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img1.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img2.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img3.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img4.jpg" alt=""/></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="normal">
+                                <div class="sellw_show">
+                                    <p>
+                                        <i>3</i>
+                                        汕头市澄海区依雅优毛织厂
+                                    </p>
+                                    <span>
+                                        <em style="width: 70%"></em>
+                                    </span>
+                                    <ul>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img1.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img2.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img3.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img4.jpg" alt=""/></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="normal">
+                                <div class="sellw_show">
+                                    <p>
+                                        <i>4</i>
+                                        汕头市澄海区依雅优毛织厂
+                                    </p>
+                                    <span>
+                                        <em style="width: 60%"></em>
+                                    </span>
+                                    <ul>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img1.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img2.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img3.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img4.jpg" alt=""/></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="normal">
+                                <div class="sellw_show">
+                                    <p>
+                                        <i>5</i>
+                                        汕头市澄海区依雅优毛织厂
+                                    </p>
+                                    <span>
+                                        <em style="width: 50%"></em>
+                                    </span>
+                                    <ul>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img1.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img2.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img3.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img4.jpg" alt=""/></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="normal">
+                                <div class="sellw_show">
+                                    <p>
+                                        <i>6</i>
+                                        汕头市澄海区依雅优毛织厂
+                                    </p>
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <ul>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img1.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img2.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img3.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img4.jpg" alt=""/></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="normal">
+                                <div class="sellw_show">
+                                    <p>
+                                        <i>7</i>
+                                        汕头市澄海区依雅优毛织厂
+                                    </p>
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <ul>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img1.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img2.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img3.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img4.jpg" alt=""/></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="normal">
+                                <div class="sellw_show">
+                                    <p>
+                                        <i>8</i>
+                                        汕头市澄海区依雅优毛织厂
+                                    </p>
+                                    <span>
+                                        <em></em>
+                                    </span>
+                                    <ul>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img1.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img2.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img3.jpg" alt=""/></a></li>
+                                        <li><a href="javascript:;"><img src="images/sellw_show_img4.jpg" alt=""/></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="imgarea">
+        <div class="layout">
+            <a href="javascript:;"><img src="images/area2.jpg" alt=""/></a>
+        </div>
+    </div>
+    <div class="sellwell">
+        <div class="layout">
+            <div class="left">
+                <div class="sell_main">
+                    <div class="sellw_left">
+                        <img src="images/sellw_left2.png" alt=""/>
+                        <ul style="height: 103px;">
+                            <li><a href="javascript:;">童连衣裙</a></li>
+                            <li><a href="javascript:;">女童连衣裙</a></li>
+                            <li><a href="javascript:;">童打底裤</a></li>
+                            <li><a href="javascript:;">纯棉童服</a></li>
+                            <li><a href="javascript:;">女童短裙</a></li>
+                            <li><a href="javascript:;">潮童衬衫</a></li>
+                            <li><a href="javascript:;">宽松孕妇裙</a></li>
+                        </ul>
+                        <a href="javascript:;" class="sellw_more">查看更多</a>
+                        <p style=" font-size: 24px; color: #ffffff; background: none;position: absolute; bottom: 33px; left: 20px">母婴孕童</p>
+                    </div>
+                    <div class="sellw_middle">
+                        <div class="sellm_main">
+                            <dl>
+                                <dt class="sellm_dt">
+                                    <img src="images/sellm_main_img1.jpg" alt=""/>
+                                    <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                    </a>
+                                </dt>
+                                <dd class="sellm_dd">
+                                    <div class="sellm_mask"></div>
+                                    <div class="sellm_show">
+                                        <h6>简·约屋</h6>
+                                        <p>248人收藏</p>
+                                        <p>均价<span>￥41.67</span></p>
+                                        <i>广州沙河南城3层36</i>
+                                    </div>
+                                    <div class="sellm_hide">
+
+                                        <h6>简·约屋</h6>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="sellm_dt">
+                                    <img src="images/sellm_main_img1.jpg" alt=""/>
+                                    <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                    </a>
+                                </dt>
+                                <dd class="sellm_dd">
+                                    <div class="sellm_mask"></div>
+                                    <div class="sellm_show">
+                                        <h6>简·约屋</h6>
+                                        <p>248人收藏</p>
+                                        <p>均价<span>￥41.67</span></p>
+                                        <i>广州沙河南城3层36</i>
+                                    </div>
+                                    <div class="sellm_hide">
+
+                                        <h6>简·约屋</h6>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="sellm_dt">
+                                    <img src="images/sellm_main_img1.jpg" alt=""/>
+                                    <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                    </a>
+                                </dt>
+                                <dd class="sellm_dd">
+                                    <div class="sellm_mask"></div>
+                                    <div class="sellm_show">
+                                        <h6>简·约屋</h6>
+                                        <p>248人收藏</p>
+                                        <p>均价<span>￥41.67</span></p>
+                                        <i>广州沙河南城3层36</i>
+                                    </div>
+                                    <div class="sellm_hide">
+
+                                        <h6>简·约屋</h6>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="left">
+                <div class="sell_main">
+                    <div class="sellw_left">
+                        <img src="images/sellw_left3.png" alt=""/>
+                        <ul style="height: 182px">
+                            <li><a href="javascript:;">女鞋市场</a></li>
+                            <li><a href="javascript:;">男鞋市场</a></li>
+                            <li><a href="javascript:;">女鞋新品</a></li>
+                            <li><a href="javascript:;">男士皮鞋</a></li>
+                            <li><a href="javascript:;">时尚正装</a></li>
+                            <li><a href="javascript:;">女士凉鞋</a></li>
+                            <li><a href="javascript:;">男士休闲鞋</a></li>
+                            <li><a href="javascript:;">内衣市场</a></li>
+                            <li><a href="javascript:;">箱包市场</a></li>
+                            <li><a href="javascript:;">女士文胸</a></li>
+                            <li><a href="javascript:;">女士挎包</a></li>
+                            <li><a href="javascript:;">男女内裤</a></li>
+                            <li><a href="javascript:;">男女钱包</a></li>
+                            <li><a href="javascript:;">特色配饰</a></li>
+                        </ul>
+                        <a href="javascript:;" class="sellw_more">查看更多</a>
+                        <p style=" font-size: 24px; color: #ffffff; background: none;position: absolute; bottom: 33px; left: 20px">综合市场</p>
+                    </div>
+                    <div class="sellw_middle">
+                        <div class="sellm_main">
+                            <dl>
+                                <dt class="sellm_dt">
+                                    <img src="images/sellm_main_img1.jpg" alt=""/>
+                                    <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                    </a>
+                                </dt>
+                                <dd class="sellm_dd">
+                                    <div class="sellm_mask"></div>
+                                    <div class="sellm_show">
+                                        <h6>简·约屋</h6>
+                                        <p>248人收藏</p>
+                                        <p>均价<span>￥41.67</span></p>
+                                        <i>广州沙河南城3层36</i>
+                                    </div>
+                                    <div class="sellm_hide">
+
+                                        <h6>简·约屋</h6>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="sellm_dt">
+                                    <img src="images/sellm_main_img1.jpg" alt=""/>
+                                    <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                    </a>
+                                </dt>
+                                <dd class="sellm_dd">
+                                    <div class="sellm_mask"></div>
+                                    <div class="sellm_show">
+                                        <h6>简·约屋</h6>
+                                        <p>248人收藏</p>
+                                        <p>均价<span>￥41.67</span></p>
+                                        <i>广州沙河南城3层36</i>
+                                    </div>
+                                    <div class="sellm_hide">
+
+                                        <h6>简·约屋</h6>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="sellm_dt">
+                                    <img src="images/sellm_main_img1.jpg" alt=""/>
+                                    <a href="javascript:;" class="sellm_enter">
+                                    <span>
+                                        进入档口
+                                    </span>
+                                    </a>
+                                </dt>
+                                <dd class="sellm_dd">
+                                    <div class="sellm_mask"></div>
+                                    <div class="sellm_show">
+                                        <h6>简·约屋</h6>
+                                        <p>248人收藏</p>
+                                        <p>均价<span>￥41.67</span></p>
+                                        <i>广州沙河南城3层36</i>
+                                    </div>
+                                    <div class="sellm_hide">
+
+                                        <h6>简·约屋</h6>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="javascript:;"><img src="images/sellm_main_img1.jpg" alt=""/></a></dt>
+                                            <dd><a href="javascript:;">￥73.0-76.0</a></dd>
+                                        </dl>
+
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="talk">
+        <div class="layout">
+            <h3 class="subtitle"><i></i>游论坛</h3>
+            <div class="talk_main">
+                <div class="talk_l">
+                    <h2 class="contitle">话题讨论</h2>
+                    <dl>
+                        <dt><img src="images/talk_img0.jpg" alt=""/></dt>
+                        <dd><a href="javascript:;">广州市工商局领导莅临衣联网，共同探讨细分市场的优势</a></dd>
+                    </dl>
+                    <div class="last_reply">
+                       <div class="last_title">
+                            <span></span>
+                            <h3 class="last_h3">最新回复</h3>
+                            <a href="javascript:;"></a>
+                       </div>
+                        <ul class="reply_list">
+                            <li>
+                                <span></span>
+                                <p>“微软雅黑 微软雅黑月日，广州市工商局专业市场管理分局局长苏学</p>
+                                <i>by eellyTeam</i>
+                            </li>
+                            <li>
+                                <span></span>
+                                <p>“微软雅黑 微软雅黑月日，广州市工商局专业市场管理分局局长苏学</p>
+                                <i>by eellyTeam</i>
+                            </li>
+                            <li>
+                                <span></span>
+                                <p>“微软雅黑 微软雅黑月日，广州市工商局专业市场管理分局局长苏学</p>
+                                <i>by eellyTeam</i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="talk_m">
+                    <h2 class="contitle">最新热点</h2>
+                    <a href="javascript:;" class="more"></a>
+                    <ul class="talk_mcon">
+                        <li>
+                            <a href="javascript:;">
+                                <p class="pt">衣联厂+功能大揭秘，到底是怎么神奇的呢？</p>
+                                <dl class="gt">
+                                    <dt><img src="images/gt_img0.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p class="pcon">图文结合，剖析衣联厂+到底有哪些神奇的功能，之怎样做到服装行业增粉工具的领航者的！</p>
+                                        <p class="prev">
+                                            <i></i>
+                                            <span>13537 </span>
+                                            <span>回复19</span>
+                                        </p>
+                                    </dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <p class="pt">2016衣联备货节即将盛典开幕</p>
+                                <dl class="gt">
+                                    <dt><img src="images/gt_img1.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p class="pcon">开学了，先定个小目标，比方说本月先参加衣联网的第五届备货节。</p>
+                                        <p class="prev">
+                                            <i></i>
+                                            <span>13537 </span>
+                                            <span>回复19</span>
+                                        </p>
+                                    </dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <p class="pt">技术灌顶—助力传统批发市场全新转型升级</p>
+                                <dl class="gt">
+                                    <dt><img src="images/gt_img2.png" alt=""/></dt>
+                                    <dd>
+                                        <p class="pcon">在技术上采用“灌顶”法，在运营上采用“加持”法——将衣联掌握的电商运营技巧毫无保留地传授给批发市场，让每个市场都能把电商做成功。</p>
+                                        <p class="prev">
+                                            <i></i>
+                                            <span>13537 </span>
+                                            <span>回复19</span>
+                                        </p>
+                                    </dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <p class="pt">一款让顾客不在流失的锁粉神器</p>
+                                <dl class="gt">
+                                    <dt><img src="images/gt_img3.jpg" alt=""/></dt>
+                                    <dd>
+                                        <p class="pcon">  衣联厂+，一款让顾客不在流失的锁粉神器</p>
+                                        <p class="prev">
+                                            <i></i>
+                                            <span>13537 </span>
+                                            <span>回复19</span>
+                                        </p>
+                                    </dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <p class="pt">双11供货分享，一起定个小目标</p>
+                                <dl class="gt">
+                                    <dt><img src="images/gt_img4.png" alt=""/></dt>
+                                    <dd>
+                                        <p class="pcon">作为厂商，如果遇到一个好的互联网商户，我们要做的是保持质量，价格可以商量，但是质量千万不能掉，伤害的不单单是自己的口碑，还丢了很大桩生意。</p>
+                                        <p class="prev">
+                                            <i></i>
+                                            <span>13537 </span>
+                                            <span>回复19</span>
+                                        </p>
+                                    </dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <p class="pt">掌握技巧做双11服装货源供应坚强后盾</p>
+                                <dl class="gt">
+                                    <dt><img src="images/gt_img5.png" alt=""/></dt>
+                                    <dd>
+                                        <p class="pcon">衣联厂+ 正在成为帮助实体批发市场切入互联网创新生态链的关键工具应用，从容应对买家客户的不同需求。</p>
+                                        <p class="prev">
+                                            <i></i>
+                                            <span>13537 </span>
+                                            <span>回复19</span>
+                                        </p>
+                                    </dd>
+                                </dl>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="talk_r">
+                    <h2 class="contitle">精华干货</h2>
+                    <div class="talk_rwrap">
+                        <dl class="talk_rnews">
+                            <dt><img src="images/talk_rimg0.jpg" alt=""/></dt>
+                            <dd class="topic">
+                                <a href="javascript:;">2016云货源工程之夏季新品首发之店主模特走秀直播</a>
+                            </dd>
+                            <dd class="intro"><a href="javascript:;">经过一个月的艰难选拔和辛苦准备，服装店主模特付出了非常多的时间和汗水，今天终于商场，这一瞬间万千的衣服都被穿“活”了。</a></dd>
+                        </dl>
+                        <dl class="talk_rnews">
+                            <dt><img src="images/talk_rimg1.jpg" alt=""/></dt>
+                            <dd class="topic">
+                                <a href="javascript:;">加入衣联网厂+，泷泷目标是今年做衣联童装的NO.1</a>
+                            </dd>
+                            <dd class="intro"><a href="javascript:;"></a></dd>
+                        </dl>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="recommend">
+        <div class="layout" style="width: 1215px">
+            <div class="rec_goods">
+                <h3 class="subtitle"><i style=" background-position: -12px -269px"></i>新品推荐</h3>
+            </div>
+        </div>
+    </div>
+    <div class="change">
+        <div class="layout">
+            <div class="change_area">
+                <ul class="change_btn">
+                    <li id="change_active">衣联简介</li>
+                    <li>衣联历程</li>
+                    <li>媒体报道</li>
+                    <li>活动回眸</li>
+                    <li>加入衣联</li>
+                    <li>入驻商家</li>
+                    <li>联系商家</li>
+                </ul>
+                <div class="change_list">
+                    <div class="introduce">
+                        <div class="intr_l">中国互联网100强企业，由广州市衣联网络科技有限公司建立于服装批发基地——广州。依托衣联网开展直批（服装厂直接向服装店供货）业务的服装批发实体商家规模在全国名列前茅，其数量超过诸多知名实体服装批发市场。衣联网上的实体服装批发商主要来自十三行、沙河、白马、虎门等各地著名的服装批发市场，在衣联网上您可以拿到款新、价低的一手货。衣联网有健全的交易安全保障体系，通过衣联收银台付款的都能得到安全的进货交易保障。衣联网是服装店主进货的天堂！
+                        </div>
+                        <div class="intr_m">
+                            <h3>关注我们</h3>
+                            <a href="javascript:;" ></a>
+                            <a href="javascript:;"style="background-position: -43px 0"></a>
+                            <a href="javascript:;" style="background-position: -84px 0;"></a>
+                        </div>
+                        <div class="intr_r">
+                            <img src="images/intr_rimg.jpg" alt="" class="intr_logo"/>
+                            <a href="javascript:;" class="intr_in">商家入店咨询</a>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <ul>
+                            <li>
+                                <i class="arrow_r"></i><b>2003-2006</b><br>
+
+                                建立中国首个服装店主论坛，是中国最大、也是最专业的服装店主论坛。是“先聚进货店主，再招批发商”这个全国独有“反向招商”模式的基础。
+                            </li>
+                            <li >
+                                <i class="arrow_r"></i><b>2007-2009</b><br>
+                                开展自营网络批发业务，在42个城市设立办事处，用户遍及10多个国家；率先在本行业担负教育和培育市场职责，是中国服装自营B2B企业的旗舰。
+                                础。
+                            </li>
+                            <li>
+                                <i class="arrow_r"></i><b>2010</b><br>
+                                按照发展三步曲：【论坛聚买家-自营摸市场-开放做平台】，宣布开放平台，引起各大传媒关注；同年，获得“中国互联网产业100强奖”殊荣。
+                            </li>
+                            <li>
+                                <i class="arrow_r"></i><b>2011</b><br>
+                                获得“中国可信网站示范单位”荣誉；同年以“防抄版”等创新技术获得由美国麻省理工大学和南方都市报颁发的“3C创新力量传媒大奖最佳商业模式奖”。
+                            </li>
+                            <li>
+                                <i class="arrow_r"></i><b>2012</b><br>
+                                喜获“中国最具价值的电子商务网站金质服务奖”；耗巨资新增能容纳800多人的新办公区以提高服务能力，同时更换LOGO，开启了衣联网的新征程。
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="enjoyment">
+                        <a href="javascript:;"><img src="images/enjoyment.jpg" alt=""/></a>
+                    </div>
+                    <div class="activity">
+                        <ul>
+                            <li>
+                                <i class="arrow_r"></i><a href="javascript:;">2014中国流花国际服装节</a><br>
+                                时间：2014年8月15
+                                <br>
+                                地点：广州东方宾馆
+                            </li>
+                            <li style=" width: 320px">
+                                <i class="arrow_r"></i><a href="javascript:;">2014中国服装批发市场转型升级高峰论坛</a><br>
+                                时间：2014年8月15
+                                <br>
+                                地点：广州东方宾馆
+                            </li>
+                            <li>
+                                <i class="arrow_r"></i><a href="javascript:;">衣联第二届网友见面会</a><br>
+                                时间：2014年8月15
+                                <br>
+                                地点：广州东方宾馆
+                            </li>
+                            <li>
+                                <i class="arrow_r"></i><a href="javascript:;">【备货节回顾】17天，他们改变了什么？</a><br>
+                                时间：2014年8月15
+                                <br>
+                                地点：广州东方宾馆
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="join">
+                        <dl>
+                            <dt>
+                                从一个小服装论坛到如今成为网上服装批发新的领导者，衣联网在不断发展，衣联网这个大家庭在不断壮大完善起来。如今的衣联网由16个绩效部门构成，拥有500多名的在职员工。衣联网提供富有竞争力的薪酬，齐全的法定假期，完善的带薪培训体系；丰富多彩的会议形式；建立快乐的工作氛围和丰富多彩的团队活动……
+                            </dt>
+                            <dd><img src="images/join1.jpg" alt=""/></dd>
+                        </dl>
+                        <dl style="width:51%">
+                            <dt style="width: 340px">
+                                作为一家国内最大服装批发平台，朝阳行业中的朝阳企业，一群活力四射的年轻团队等待着敢于接受挑战的你。身在广州的你，你只要热爱服装行业，热爱电商，衣联网将会提供一个实现你个人价值的舞台。
+                            </dt>
+                            <dd><img src="images/join2.jpg" alt=""/></dd>
+                        </dl>
+                    </div>
+                    <div class="getin">
+                        <dl>
+                            <dt></dt>
+                            <dd>衣联网是中国互联网100强企业、全国可信网站示范单位。
+                                依托衣联网进货的服装零售店家，入驻衣联网的服
+                                装批发商家，卖家和买家的规模均居全行业第一。</dd>
+                        </dl>
+                        <dl>
+                            <dt style="background-position: -76px -61px;"></dt>
+                            <dd> 作为全国可信网站示范单位，有健全的保障体系，只要通过衣联收银台付款，就能得到非常安全的进货保障。衣联网具有独特的“防抄板、防串货”技术，保障批发商的商品优势。</dd>
+                        </dl>
+                        <div>
+                            <img src="images/getin.jpg" alt=""/>
+                            <a href="javascript:;">已入驻商家实体服装批发商<i></i></a>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <ul>
+                            <li>
+                                <img src="images/contact1.gif" alt=""/>
+                            </li>
+                            <li>
+                                <img src="images/contact2.gif" alt=""/>
+                                <p>营业时间：周一至六 | 9:00 - 18:00</p>
+                            </li>
+                            <li style="border: 0px; width: 370px;">
+                                总部：广州市越秀区广州大道中599号红星美凯龙广场12楼<br>
+                                E-mail：eelly#eelly.com (请将#换成@)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hd">
+        <a href="javascript:;"></a>
+    </div>
+    <div class="index_footer">
+        <div class="layout">
+            <div class="ft_map">
+                <dl>
+                    <dt><img src="images/ft_map_new.png" alt=""/><i>新手指南</i></dt>
+                    <dd><a href="javascript:;">账户注册</a></dd>
+                    <dd><a href="javascript:;">买家入门</a></dd>
+                    <dd><a href="javascript:;">卖家专区</a></dd>
+                    <dd><a href="javascript:;">常见问题</a></dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/ft_map_pay.png" alt=""/><i>支付方式</i></dt>
+                    <dd><a href="javascript:;">付款方式</a></dd>
+                    <dd><a href="javascript:;">网银支付</a></dd>
+                    <dd><a href="javascript:;">银联支付</a></dd>
+                    <dd><a href="javascript:;">支付宝支付</a></dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/ft_map_protect.png" alt=""/><i>交易保障</i></dt>
+                    <dd><a href="javascript:;">诚信保障</a></dd>
+                    <dd><a href="javascript:;">包退包换</a></dd>
+                    <dd><a href="javascript:;">准时发货</a></dd>
+                    <dd><a href="javascript:;">实拍认证</a></dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/ft_map_argu.png" alt=""/><i>投诉维权</i></dt>
+                    <dd><a href="javascript:;">仲裁管理</a></dd>
+                    <dd><a href="javascript:;">举报管理</a></dd>
+                    <dd><a href="javascript:;">投诉管理</a></dd>
+                    <dd><a href="javascript:;">退货退款</a></dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/ft_map_service.png" alt=""/><i>商家服务</i></dt>
+                    <dd><a href="javascript:;">开店管理</a></dd>
+                    <dd><a href="javascript:;">商家入驻</a></dd>
+                    <dd><a href="javascript:;">商家认证</a></dd>
+                    <dd><a href="javascript:;">商家提现</a></dd>
+                </dl>
+                <dl class="last">
+                    <dt><i>手机登录：m.eelly.com</i></dt>
+                    <dd><em><img src="images/ft_map_apple.png" alt=""/></em><a href="javascript:;">开店管理</a></dd>
+                    <dd><em><img src="images/ft_map_andriod.png" alt=""/></em><a href="javascript:;">商家入驻</a></dd>
+                </dl>
+            </div>
+            <div class="ft_link">
+                <p>
+                    热门分类:
+                    <a href="javascript">长袖T恤</a>|
+                    <a href="javascript">广东童装批发</a>|
+                    <a href="javascript">情侣装外套</a>|
+                    <a href="javascript">黑色连衣裙</a>|
+                    <a href="javascript">秋装新款连衣裙</a>|
+                    <a href="javascript">韩版时尚男装</a>|
+                    <a href="javascript">女风衣外套</a>|
+                    <a href="javascript">秋装连衣裙</a>|
+                    <a href="javascript">韩版修身牛仔裤</a>|
+                    <a href="javascript">儿童服装</a>|
+                    <a href="javascript">女款卫衣</a>|
+                    <a href="javascript">紧身裤</a>|
+                    <a href="javascript">打底衫长款</a>|
+                    <a href="javascript">服装店铺排行</a>
+                </p>
+                <i class="ft_linkbtn"></i>
+                <p class="last">
+                    <a href="javascript">秋季服装批发</a>|
+                    <a href="javascript">服装批发导航</a>|
+                    <a href="javascript">夏季服装批发</a>|
+                    <a href="javascript">服装批发网</a>|
+                    <a href="javascript">服装批发市场</a>|
+                    <a href="javascript">服装货源</a>
+                </p>
+            </div>
+            <div class="ft_link">
+                <p>
+                    友情链接:
+                    <a href="javascript">QQ:24555-95265</a>|
+                    <a href="javascript">中国建材网</a>|
+                    <a href="javascript">中国女性网</a>|
+                    <a href="javascript">名鞋库</a>|
+                    <a href="javascript">蘑菇街</a>|
+                    <a href="javascript">家具</a>|
+                    <a href="javascript">连锁加盟网</a>|
+                    <a href="javascript">发型</a>|
+                    <a href="javascript">爱靓网时尚女生</a>|
+                    <a href="javascript">中商情报网</a>|
+                    <a href="javascript">播视网视频</a>|
+                    <a href="javascript">b2b</a>|
+                    <a href="javascript">聪慧网</a>|
+                    <a href="javascript">时尚品牌网</a>|
+                    <a href="javascript">结婚网</a>
+                </p>
+                <i class="ft_linkbtn"></i>
+                <p class="last">
+                    <a href="javascript">婚纱摄影</a>|
+                    <a href="javascript">聚美优品优惠券</a>|
+                    <a href="javascript">青创城国际批发</a>|
+                    <a href="javascript">搜了网</a>|
+                    <a href="javascript">中国丽人网</a>|
+                    <a href="javascript">超级电视</a>|
+                    <a href="javascript">手表品牌排行榜</a>|
+                    <a href="javascript">返利网</a>|
+                    <a href="javascript">家具</a>|
+                    <a href="javascript">寻购网</a>|
+                    <a href="javascript">拍鞋网</a>|
+                    <a href="javascript">万表网名表</a>|
+                    <a href="javascript">时尚</a>
+                </p>
+            </div>
+            <div class="ft_about">
+                <a href="javascript">关于衣联</a>|
+                <a href="javascript">衣联动态</a>|
+                <a href="javascript">衣联招聘</a>|
+                <a href="javascript">入驻商家</a>|
+                <a href="javascript">合作伙伴</a>|
+                <a href="javascript">联系衣联</a>
+            </div>
+            <div class="ft_copyright">
+                Copyright&copy;2003-2016 Eelly.com All Right Reserved.广州市农联网络科技有限公司 版权所有 隐私声明 粤ICP备10209547号-2 公安备案号44010402000492
+            </div>
+            <div class="ft_pic">
+                <a href="javascript:;"><img src="images/ft_link_img1.png" alt="" /></a>
+                <a href="javascript:;"><img src="images/ft_link_img2.png" alt="" /></a>
+                <a href="javascript:;"><img src="images/ft_link_img3.png" alt="" /></a>
+                <a href="javascript:;"><img src="images/ft_link_img4.png" alt="" /></a>
+                <a href="javascript:;"><img src="images/ft_link_img5.png" alt="" /></a>
+                <a href="javascript:;"><img src="images/ft_link_img6.png" alt="" /></a>
+                <a href="javascript:;"><img src="images/ft_link_img7.png" alt="" /></a>
+                <a href="javascript:;"><img src="images/ft_link_img8.png" alt="" /></a>
+                <a href="javascript:;"><img src="images/ft_link_img9.png" alt="" /></a>
+                <a href="javascript:;"><img src="images/ft_link_img10.png" alt="" /></a>
+            </div>
+            <div class="ft_pic">
+                <a href="javascript:;"><img src="images/ft_link_img11.png" alt="" /></a>
+                <a href="javascript:;"><img src="images/ft_link_img12.png" alt="" /></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
