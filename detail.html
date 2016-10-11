@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>详情页</title>
+    <link rel="stylesheet" href="style/similar.css"/>
+    <link rel="stylesheet" href="style/style.css"/>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/detail.js"></script>
+    <script src="js/similar.js"></script>
+    <script src="js/picMove.js"></script>
+    <script src="js/fade.js"></script>
+    <script src="js/cookies.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+    <ul class="sidebar_t">
+        <li>
+            <img src="images/sidenav_person.png" alt=""/><span></span>
+            <p>我的账户</p>
+        </li>
+        <div class="shop"><img src="images/sidenav_shopping.png" alt=""/><i>进货车</i></div>
+        <li>
+            <img src="images/sidenav_card.png" alt=""/><span></span>
+            <p>我的优惠券</p>
+        </li>
+        <li>
+            <img src="images/sidenav_love.png" alt=""/><span></span>
+            <p>我的收藏</p>
+        </li>
+        <li>
+            <img src="images/sidenav_vs.png" alt=""/><span></span>
+            <p>我的比货栏</p>
+        </li>
+        <li>
+            <img src="images/sidenav_history.png" alt=""/><span></span>
+            <p>最近浏览记录</p>
+        </li>
+    </ul>
+    <ul class="sidebar_b">
+        <li>
+            <img src="images/sidenav_code.png" alt=""/><span></span>
+            <p class="side_code">
+                <img src="images/dianjia.png" alt=""/>
+                <img src="images/changjia.png" alt=""/>
+            </p>
+        </li>
+        <li>
+            <img src="images/sidenav_yijian.png" alt=""/><span></span>
+            <p>意见反馈</p>
+        </li>
+        <li id="turnback">
+            <img src="images/sidenav_top.png" alt=""/><span></span>
+            <p>返回顶部</p>
+        </li>
+    </ul>
+</div>
+    <div class="detail_header">
+        <div class="layout">
+            <p class="welcome">Hi,欢迎来到衣联&nbsp;
+                <a href="login.html">请<span>登录</span> </a>|
+                <a href="register.html"><span>免费注册</span></a>
+            </p>
+            <ul class="nav">
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/nav_map.png" /><span></span>网站导航
+                    </a>
+                    <ul class="map">
+                        <div class="map_l" id="map_l">
+                            <h3>商品分类</h3>
+
+                        </div>
+                        <div class="map_r">
+                            <dl>
+                                <dt class="green">社区</dt>
+                                <dd>
+                                    <a href="javascript:;">衣联论坛</a>
+                                    <a href="javascript:;">买手帮</a>
+                                    <a href="javascript:;">开店工具</a>
+                                    <a href="javascript:;">服装加盟</a>
+                                    <a href="javascript:;">服装企业</a>
+                                </dd>
+                            </dl>
+                            <dl class="oran">
+                                <dt>资讯</dt>
+                                <dd>
+                                    <a href="javascript:;">衣联资讯</a>
+                                    <a href="javascript:;">衣联百科</a>
+                                    <a href="javascript:;">衣联地图</a>
+                                    <a href="javascript:;">批发市场</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="blue">服务指南</dt>
+                                <dd>
+                                    <a href="javascript:;">新手入门</a>
+                                    <a href="javascript:;">帮助中心</a>
+                                    <a href="javascript:;">衣联规则</a>
+                                    <a href="javascript:;">诚信保障</a>
+                                    <a href="javascript:;">商家认证</a>
+                                    <a href="javascript:;">交易安全</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt class="purple">主要频道</dt>
+                                <dd>
+                                    <a href="javascript:;">好货推荐</a>
+                                    <a href="javascript:;">网店进货</a>
+                                    <a href="javascript:;">品牌馆</a>
+                                    <a href="javascript:;">逛市场</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/nav_mobile.png" /><span></span>手机逛衣联
+                    </a>
+                    <ul class="mobile">
+                        <li>
+                            <dl>
+                                <dt><img src="images/dianjia.png" alt=""/></dt>
+                                <dd>
+                                    <h5>衣联店+</h5>
+                                    <a href="javascript:;" id="iphone" class="iphone"></a>
+                                    <a href="javascript:;" id="andriod" class="andriod"></a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><img src="images/changjia.png" alt=""/></dt>
+                                <dd>
+                                    <h5>衣联厂+</h5>
+                                    <a href="javascript:;" id="iphone" class="iphone"></a>
+                                    <a href="javascript:;" id="andriod" class="andriod"></a>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/nav_help.png" /><span></span>在线客服
+                    </a>
+                    <ul class="online">
+                        <li>
+                            <a href="javascript:;">进货咨询</a>
+                            <a href="javascript:;">入驻店铺</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="images/nav_love.png" /><span></span>收藏夹
+                    </a>
+                    <ul class="collect">
+                        <li>
+                            <a href="javascript:;">收藏的商品</a>
+                            <a href="javascript:;">收藏的店铺</a>
+                            <a href="javascript:;">收藏的动态</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="shopping.html">
+                        <img src="images/nav_shopping.png"/>
+                        <span></span>进货车
+                    </a>
+                    <ul class="blancket">
+                        <p class="title">最近加入的货品 ：</p>
+                        <div class="blan_main"></div>
+                        <div class='total'>
+                            <p>
+                                <span class='total_r'>
+                                    <b>总计</b>
+                                    <em>￥&nbsp;<span class='t_pri'></span></em>
+                                </span>
+                                <span class='total_l'>
+                                    共<span class='t_amount'></span>件
+                                </span>
+                            </p>
+                            <p>
+                                <a href='shopping.html' target='_blank' class='go_shopping'>查看购物车</a>
+                            </p>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">我的衣联</a>
+                    <ul class="myeelly">
+                        <li>
+                            <h6>买家</h6>
+                            <a href="javascript:;">等待我付款</a>
+                            <a href="javascript:;">等待卖家发货</a>
+                        </li>
+                        <li>
+                            <h6>卖家</h6>
+                            <a href="javascript:;">等待我发货</a>
+                            <a href="javascript:;">等待买家付款</a>
+                            <a href="javascript:;">出售中的商品</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="index.html" class="first">首页</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="detail_title">
+        <div class="layout">
+            <div class="det_left">
+                <div class="det_left_show">
+                    <div class="det_left_name">
+                        <span class="store_year">1年店</span>
+                        <span class="store_name">花艺双丽</span>
+                    </div>
+                    <div class="de_left_locate">
+                        <span class='det_locateimg'></span>
+                        <span class="det_location">广东省 广州市 天河区 沙河南城3层 23</span>
+                        <span class="det_addr_code"></span>
+                    </div>
+                </div>
+                <div class="det_left_hide">
+                    <div class="det_left_show">
+                        <div class="det_left_name">
+                            <span class="store_year">1年店</span>
+                            <span class="store_name">花艺双丽</span>
+                        </div>
+                        <div class="de_left_locate">
+                            <span class='det_locateimg'></span>
+                            <span class="det_location">广东省 广州市 天河区 沙河南城3层 23</span>
+                            <span class="det_addr_code"></span>
+                        </div>
+                    </div>
+                    <div class="det_join">
+                        <div class="det_join1">
+                            <p class="store_join_money">2000.00</p>
+                            <p class="store_join_text">保证金</p>
+                        </div>
+                        <ul class="first">
+                            <li>
+                                <i style="background-position: 0 -230px;"></i>
+                                <span>实拍认证</span>
+                            </li>
+                            <li>
+                                <i style="background-position: 0 -90px;"></i>
+                                <span>48小时退换货</span>
+                            </li>
+                            <li>
+                                <i style="background-position: 0 -151px;"></i>
+                                <span>准时发货</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <i style="background-position: 0 -170px;"></i>
+                                <span>一件代发</span>
+                            </li>
+                            <li>
+                                <i style="background-position: 0 -210px;"></i>
+                                <span>实体认证</span>
+                            </li>
+                            <li>
+                                <i style="background-position: 0 -350px;"></i>
+                                <span>企业认证</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <dl class="det_code">
+                        <dt>
+                            <img src="images/det_code.png" alt="">
+                        </dt>
+                        <dd>
+                            <p class="byphone">手机访问本店</p>
+                            <p class="byphone1">掏出手机扫一下,手机里逛店铺</p>
+                        </dd>
+                    </dl>
+                    <div class="det_button">
+                        <a href="javascript:;" class="first">进入店铺</a>
+                        <a href="javascript:;">收藏本店</a>
+                    </div>
+                </div>
+            </div>
+            <div class="det_right">
+                <img src="images/det_right_search.jpg" alt="">
+                <input type="text" placeholder="请输入你要搜索的内容" class="det_inpt"/>
+                <input type="button" value="搜本店" class="det_button1">
+                <input type="button" value="搜全站" class="det_button2">
+            </div>
+        </div>
+    </div>
+    <div class="det_subnav layout">
+        <ul>
+            <li>
+                <a href="javascript:;">首页</a>
+            </li>
+            <li>
+                <a href="javascript:;">全部商品</a>
+            </li>
+            <li>
+                <a href="javascript:;">公司档案</a>
+            </li>
+            <li>
+                <a href="javascript:;">店铺信誉</a>
+            </li>
+            <li>
+                <a href="javascript:;">一件代发</a>
+            </li>
+            <li>
+                <a href="javascript:;">代理须知</a>
+            </li>
+            <li>
+                <a href="javascript:;">退换货需知</a>
+            </li>
+            <li>
+                <a href="javascript:;">店铺介绍</a>
+            </li>
+        </ul>
+    </div>
+    <div class="det_main">
+        <div class="det_hd">
+            <div class="layout">
+                <div class="hd_title">
+                    <div>
+                        <a href="javascript:;">衣联网</a>&nbsp;
+                        <a href="javascript:;">&gt;&nbsp;女装</a>&nbsp;
+                        <a href="javascript:;">&gt;&nbsp;连衣裙</a>&nbsp;
+                        <span id="good_title">【沐沐胡同】6669#竖条纹显瘦木耳边长袖连衣裙</span>
+                    </div>
+                </div>
+                <div class="hd_main">
+                    <div class="hd_mainl">
+                        <ul class="hd_mainl_btn">
+                            <li style="border-color: #e8304e">
+                                <a href="javascript:;"><img src="images/hd_mainl_img1.png" alt="" class="good_url"></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="images/hd_mainl_img2.png" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="images/hd_mainl_img3.png" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;"><img src="images/hd_mainl_img4.png" alt=""></a>
+                            </li>
+                        </ul>
+                        <div class="hd_mainl_list">
+
+                            <div class="hd_mainl_picview">
+                                <div class="hd_mainl_mask"></div>
+                                <img src="images/hd_mainl_img01.png" alt="">
+                                <img src="images/hd_mainl_img02.png" alt="" style="display: none">
+                                <img src="images/hd_mainl_img03.png" alt=""  style="display: none">
+                                <img src="images/hd_mainl_img04.png" alt=""  style="display: none">
+                                <div class="filter"></div>
+                            </div>
+                            <div class="bigimg">
+                                <img src="images/hd_mainl_img01.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hd_mainr">
+                        <div class="hd_mainr_t">
+                            <div class="hd_price">
+                                <p class="hd_price_t">衣联批发价</p>
+                                <div class="hd_price_b">
+                                    <p class="hd_price_nu">44.00元/一件&nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;43.00元/一件</p>
+                                    <p class="hd_price_size">散批&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5-9件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;拿货&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;≥10件</p>
+                                </div>
+                            </div>
+                            <div class="hd_send">
+                                <p>配送费:&nbsp;&nbsp;<span style="color: #dd465e">6.00</span>元</p>
+                            </div>
+                            <div class="hd_color">
+                                <span class="hd_span">颜色</span>
+                                <div class="hd_colorlist">
+                                    <a class="bingo">白底灰条</a>
+                                </div>
+                            </div>
+                            <div class="hd_size">
+                                <span class="hd_span">尺码</span>
+                                <div class="hd_sizelist">
+                                    <ul>
+                                        <li class="hd_sizename">S 码</li>
+                                        <li class="hd_sizepri">44.00元</li>
+                                        <li class="hd_sizelimit">344件</li>
+                                        <li class="hd_sizechange">
+                                            <span class="hd_btn hd_minus"></span>
+                                                <span class="hd_btninner">
+                                                    <input type="text" class="j_amount" value="0"/>
+                                                </span>
+                                            <span class="hd_btn hd_plus"></span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li class="hd_sizename">M 码</li>
+                                        <li class="hd_sizepri">44.00元</li>
+                                        <li class="hd_sizelimit">300件</li>
+                                        <li class="hd_sizechange">
+                                            <span class="hd_btn hd_minus"></span>
+                                                <span class="hd_btninner">
+                                                    <input type="text" class="j_amount" value="0"/>
+                                                </span>
+                                            <span class="hd_btn hd_plus"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="hd_mainr_b">
+                                <div class="hd_link">
+                                    <a href="javascript:;" class="addin">加入购物车</a>
+                                    <a href="javascript:;" class="checknow">立即下单</a>
+                                </div>
+                                <ul class="hd_group">
+                                    <li class="appgo">
+                                        <i></i>
+                                        <a href="javascript:;">手机下单</a>
+                                    </li>
+                                    <li class="appsc">
+                                        <i></i>
+                                        <a href="javascript:;">收藏商品</a>
+                                    </li>
+                                    <li class="appbh">
+                                        <i></i>
+                                        <a href="javascript:;">我要比货</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="hd_bottom">
+                        <p>进货条件</p>
+                        <span>全店满<i>258</i>元或<i>5</i>件可混批采购</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="det_md">
+            <div class="layout">
+                <div class="md_left">
+                    <p class="md_top">
+                        本供应商热门款式
+                        <a href="javascript:;">查看本店全部（1859）</a>
+                    </p>
+                    <div class="md_hotgood">
+                        <ul class="md_hota">
+                            <li>
+                                <dl>
+                                    <dt><img src="images/det_md_img1.jpeg" alt=""/></dt>
+                                    <dd>
+                                        <span>￥55.00~56.00</span>
+                                        <i class="shopping_img"></i>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><img src="images/det_md_img1.jpeg" alt=""/></dt>
+                                    <dd>
+                                        <span>￥55.00~56.00</span>
+                                        <i class="shopping_img"></i>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><img src="images/det_md_img1.jpeg" alt=""/></dt>
+                                    <dd>
+                                        <span>￥55.00~56.00</span>
+                                        <i class="shopping_img"></i>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><img src="images/det_md_img1.jpeg" alt=""/></dt>
+                                    <dd>
+                                        <span>￥55.00~56.00</span>
+                                        <i class="shopping_img"></i>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <ul class="md_hotb">
+                            <li>
+                                <dl>
+                                    <dt><img src="images/det_md_img2.jpeg" alt=""/></dt>
+                                    <dd>
+                                        <span>￥55.00~56.00</span>
+                                        <i class="shopping_img"></i>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><img src="images/det_md_img2.jpeg" alt=""/></dt>
+                                    <dd>
+                                        <span>￥55.00~56.00</span>
+                                        <i class="shopping_img"></i>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><img src="images/det_md_img2.jpeg" alt=""/></dt>
+                                    <dd>
+                                        <span>￥55.00~56.00</span>
+                                        <i class="shopping_img"></i>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><img src="images/det_md_img2.jpeg" alt=""/></dt>
+                                    <dd>
+                                        <span>￥55.00~56.00</span>
+                                        <i class="shopping_img"></i>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="det_bd">
+            <div class="layout">
+                <div class="bd_main">
+                    <div class="bd_tabbox">
+                        <ul class="bd_tabnav">
+                            <li class="bd_act">商品详情</li>
+                            <li>商品推荐</li>
+                            <li>留言咨询(22)</li>
+                        </ul>
+                        <ul class="bd_tabcon">
+                            <li>
+                                <span>货号</span>
+                                <em id="good_id">A730-6669</em>
+                            </li>
+                            <li>
+                                <span>重量</span>
+                                <em>0.35Kg</em>
+                            </li>
+                            <li>
+                                <span>分类</span>
+                                <em>连衣裙</em>
+                            </li>
+                            <li>
+                                <span>吊牌</span>
+                                <em>有</em>
+                            </li>
+                            <li>
+                                <span>商标</span>
+                                <em id="gongying">沐沐胡同</em>
+                            </li>
+                            <li>
+                                <span>风格</span>
+                                <em>甜美装</em>
+                            </li>
+                            <li>
+                                <span>消费人群</span>
+                                <em>少女时代</em>
+                            </li>
+                            <li>
+                                <span>版型</span>
+                                <em>宽松型</em>
+                            </li>
+                            <li>
+                                <span>领型</span>
+                                <em>圆领</em>
+                            </li>
+                            <li>
+                                <span>袖长</span>
+                                <em>长袖</em>
+                            </li>
+                            <li>
+                                <span>裙长</span>
+                                <em>中长裙</em>
+                            </li>
+                            <li>
+                                <span>面料/材质</span>
+                                <em>其他</em>
+                            </li>
+                            <li>
+                                <span>图案</span>
+                                <em>条纹</em>
+                            </li>
+                            <li>
+                                <span>季节</span>
+                                <em>秋季</em>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="fstyle">
+                        <img src="images/fstyle_img.png" alt=""/>
+                        <div class="f_view">
+                            <p>衣长75&nbsp;腰围50&nbsp;下摆66&nbsp;臀围60</p>
+                            <br><br><br><br>
+                            <p class="f_intr">这款条纹连衣裙实在是炒鸡好看的~</p>
+                            <p class="f_intr">极力推荐</p>
+                            <p class="f_intr">不管是逛街还是约会都非常适合呢！</p>
+                            <p class="f_intr">竖条纹显瘦，衣领背后有拉链，穿脱都很方便</p>
+                            <br><br><br><br>
+                            <img src="images/f_style_img1.jpg" alt=""/>
+                            <img src="images/f_style_img2.jpg" alt=""/>
+                            <img src="images/f_style_img3.jpg" alt=""/>
+                            <img src="images/f_style_img4.jpg" alt=""/>
+                            <img src="images/f_style_img5.jpg" alt=""/>
+                            <img src="images/f_style_img6.jpg" alt=""/>
+                            <img src="images/f_style_img7.jpg" alt=""/>
+                            <img src="images/f_style_img8.jpg" alt=""/>
+                            <img src="images/f_style_img9.jpg" alt=""/>
+                            <img src="images/f_style_img10.jpg" alt=""/>
+                            <img src="images/f_style_img11.jpg" alt=""/>
+                            <img src="images/f_style_img12.jpg" alt=""/>
+                            <img src="images/f_style_img13.jpg" alt=""/>
+                            <img src="images/f_style_img14.jpg" alt=""/>
+                            <img src="images/f_style_img15.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="det_block"></div>
+                </div>
+            </div>
+        </div>
+        <div class="det_tj">
+            <div class="layout">
+                <p class="tj_text">
+                    <span>店主还拿了</span>
+                    <a href="javascript:;" class="tj_add">+批量加入进货车</a>
+                </p>
+                <ul class="tj_hot">
+                    <li>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;"><img src="images/tj_img1.jpg" alt=""/></a>
+                            </dt>
+                            <dd>
+                                <span>￥48.00~55.00</span>
+                                <a href="javascript:;" class="shopping_img"></a>
+                            </dd>
+                            <dd class="tj_choose">
+                                <input type="checkbox"/>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;"><img src="images/tj_img1.jpg" alt=""/></a>
+                            </dt>
+                            <dd>
+                                <span>￥48.00~55.00</span>
+                                <a href="javascript:;" class="shopping_img"></a>
+                            </dd>
+                            <dd class="tj_choose">
+                                <input type="checkbox"/>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;"><img src="images/tj_img1.jpg" alt=""/></a>
+                            </dt>
+                            <dd>
+                                <span>￥48.00~55.00</span>
+                                <a href="javascript:;" class="shopping_img"></a>
+                            </dd>
+                            <dd class="tj_choose">
+                                <input type="checkbox"/>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;"><img src="images/tj_img1.jpg" alt=""/></a>
+                            </dt>
+                            <dd>
+                                <span>￥48.00~55.00</span>
+                                <a href="javascript:;" class="shopping_img"></a>
+                            </dd>
+                            <dd class="tj_choose">
+                                <input type="checkbox"/>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;"><img src="images/tj_img1.jpg" alt=""/></a>
+                            </dt>
+                            <dd>
+                                <span>￥48.00~55.00</span>
+                                <a href="javascript:;" class="shopping_img"></a>
+                            </dd>
+                            <dd class="tj_choose">
+                                <input type="checkbox"/>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;"><img src="images/tj_img1.jpg" alt=""/></a>
+                            </dt>
+                            <dd>
+                                <span>￥48.00~55.00</span>
+                                <a href="javascript:;" class="shopping_img"></a>
+                            </dd>
+                            <dd class="tj_choose">
+                                <input type="checkbox"/>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;"><img src="images/tj_img1.jpg" alt=""/></a>
+                            </dt>
+                            <dd>
+                                <span>￥48.00~55.00</span>
+                                <a href="javascript:;" class="shopping_img"></a>
+                            </dd>
+                            <dd class="tj_choose">
+                                <input type="checkbox"/>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;"><img src="images/tj_img1.jpg" alt=""/></a>
+                            </dt>
+                            <dd>
+                                <span>￥48.00~55.00</span>
+                                <a href="javascript:;" class="shopping_img"></a>
+                            </dd>
+                            <dd class="tj_choose">
+                                <input type="checkbox"/>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;"><img src="images/tj_img1.jpg" alt=""/></a>
+                            </dt>
+                            <dd>
+                                <span>￥48.00~55.00</span>
+                                <a href="javascript:;" class="shopping_img"></a>
+                            </dd>
+                            <dd class="tj_choose">
+                                <input type="checkbox"/>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;"><img src="images/tj_img1.jpg" alt=""/></a>
+                            </dt>
+                            <dd>
+                                <span>￥48.00~55.00</span>
+                                <a href="javascript:;" class="shopping_img"></a>
+                            </dd>
+                            <dd class="tj_choose">
+                                <input type="checkbox"/>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;"><img src="images/tj_img1.jpg" alt=""/></a>
+                            </dt>
+                            <dd>
+                                <span>￥48.00~55.00</span>
+                                <a href="javascript:;" class="shopping_img"></a>
+                            </dd>
+                            <dd class="tj_choose">
+                                <input type="checkbox"/>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;"><img src="images/tj_img1.jpg" alt=""/></a>
+                            </dt>
+                            <dd>
+                                <span>￥48.00~55.00</span>
+                                <a href="javascript:;" class="shopping_img"></a>
+                            </dd>
+                            <dd class="tj_choose">
+                                <input type="checkbox"/>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="det_zx">
+            <div class="layout">
+                <p class="tj_text">
+                    <span class="zx_logo"></span>
+                    <span class="zx_textl">您好，很高兴为您服务，欢迎咨询:</span>
+                </p>
+                <textarea name="content_f_sytle" id="textarea_f" maxlength="200">写上你对款式、物流、服务想了解的内容,200字内 :)</textarea>
+                <p class="inline_text">
+                    <span class="inline_logo"></span>
+                    <span class="zx_textl">留言咨询(21)</span>
+                </p>
+                <p class="submit_text">
+                    <span>提交</span>
+                </p>
+                <ul class="zx_content">
+                    <li>
+                        <p class="question">
+                            <span class="question_logo"></span>
+                            <span class="question_main">无缘祗静：支持一件代发吗?</span>
+                        </p>
+                        <p class="question_kf">沐沐胡同：</p>
+                        <p class="question_kfm">支持一件代理，七天无理由退换货的，提供独立数据包。极速发货。有需要添加沐沐胡同客服微信账户Linea1990
+                            。</p>
+                    </li>
+                    <li>
+                        <p class="question">
+                            <span class="question_logo"></span>
+                            <span class="question_main">yl_41381445：您好?</span>
+                        </p>
+                        <p class="question_kf">沐沐胡同：</p>
+                        <p class="question_kfm">您好，亲。。</p>
+                    </li>
+                    <li>
+                        <p class="question">
+                            <span class="question_logo"></span>
+                            <span class="question_main">YPhome：亲，我是开实体店的，想在你家进货，一个款式拿一件这样可以吗？还有就是不好卖的版型多久时间内可以退换，质量好的话，以后长期合作。?</span>
+                        </p>
+                        <p class="question_kf">沐沐胡同：</p>
+                        <p class="question_kfm">可以的，亲。可以联系我们在线客服处理。。</p>
+                    </li>
+                    <li>
+                        <p class="question">
+                            <span class="question_logo"></span>
+                            <span class="question_main">yl_hi2w7756：6380#的腰是什么样的，纽扣，松紧带？？？?</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="question">
+                            <span class="question_logo"></span>
+                            <span class="question_main">yl_40029521：衣服质量怎么样？招代理吗?</span>
+                        </p>
+                        <p class="question_kf">沐沐胡同：</p>
+                        <p class="question_kfm">您好。招收代理的。。</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="detail_footer">
+        <div class="layout">
+            <div class="ft_map">
+                <dl>
+                    <dt><img src="images/ft_map_new.png" alt=""/><i>新手指南</i></dt>
+                    <dd><a href="javascript:;">账户注册</a></dd>
+                    <dd><a href="javascript:;">买家入门</a></dd>
+                    <dd><a href="javascript:;">卖家专区</a></dd>
+                    <dd><a href="javascript:;">常见问题</a></dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/ft_map_pay.png" alt=""/><i>支付方式</i></dt>
+                    <dd><a href="javascript:;">付款方式</a></dd>
+                    <dd><a href="javascript:;">网银支付</a></dd>
+                    <dd><a href="javascript:;">银联支付</a></dd>
+                    <dd><a href="javascript:;">支付宝支付</a></dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/ft_map_protect.png" alt=""/><i>交易保障</i></dt>
+                    <dd><a href="javascript:;">诚信保障</a></dd>
+                    <dd><a href="javascript:;">包退包换</a></dd>
+                    <dd><a href="javascript:;">准时发货</a></dd>
+                    <dd><a href="javascript:;">实拍认证</a></dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/ft_map_argu.png" alt=""/><i>投诉维权</i></dt>
+                    <dd><a href="javascript:;">仲裁管理</a></dd>
+                    <dd><a href="javascript:;">举报管理</a></dd>
+                    <dd><a href="javascript:;">投诉管理</a></dd>
+                    <dd><a href="javascript:;">退货退款</a></dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/ft_map_service.png" alt=""/><i>商家服务</i></dt>
+                    <dd><a href="javascript:;">开店管理</a></dd>
+                    <dd><a href="javascript:;">商家入驻</a></dd>
+                    <dd><a href="javascript:;">商家认证</a></dd>
+                    <dd><a href="javascript:;">商家提现</a></dd>
+                </dl>
+            </div>
+            <div class="ft_about">
+                <a href="javascript">关于衣联</a>|
+                <a href="javascript">衣联动态</a>|
+                <a href="javascript">衣联招聘</a>|
+                <a href="javascript">入驻商家</a>|
+                <a href="javascript">合作伙伴</a>|
+                <a href="javascript">联系衣联</a>
+            </div>
+            <div class="ft_copyright">
+                Copyright&copy;2003-2016 Eelly.com All Right Reserved.广州市农联网络科技有限公司 版权所有 隐私声明 粤ICP备10209547号-2 公安备案号44010402000492
+            </div>
+        </div>
+    </div>
+</body>
+</html>
